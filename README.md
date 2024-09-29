@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a comprehensive medical device monitoring system developed for Kardium Inc. It simulates medical devices, collects and processes data, and visualizes it in real-time on a web dashboard. The system consists of multiple components working together to provide a complete end-to-end solution for medical device monitoring.
+This project is a comprehensive medical device monitoring system. It simulates medical devices, collects and processes data, and visualizes it in real-time on a web dashboard. The system consists of multiple components working together to provide a complete end-to-end solution for medical device monitoring.
 
 ## System Components
 
@@ -17,7 +17,6 @@ This project is a comprehensive medical device monitoring system developed for K
 - Real-time data collection and processing
 - Data analysis and alert generation
 - Dynamic visualization of device metrics and alerts
-- Responsive web dashboard with Kardium Inc.'s red and white theme
 
 ## Technologies Used
 
@@ -40,7 +39,7 @@ This project is a comprehensive medical device monitoring system developed for K
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/medical-device-monitoring-system.git
+   git clone https://github.com/SUMMERxKx/medical-device-monitor.git
    ```
 
 2. Navigate to the project directory:
