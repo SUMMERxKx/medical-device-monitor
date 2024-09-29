@@ -1,8 +1,10 @@
 import json
 from datetime import datetime
 from flask import Flask, request, jsonify
+import logging
 
 app = Flask(__name__)
+logging.basicConfig(level=logging.INFO)
 
 class DataProcessor:
     def __init__(self):
@@ -25,6 +27,7 @@ class DataProcessor:
             'timestamp': timestamp
         })
 
+        logging.info(f"Received data: {data}")
         return self.analyze_data(device_id, metric_name)
 
     def analyze_data(self, device_id, metric_name):
@@ -32,7 +35,9 @@ class DataProcessor:
         if len(data) > 10:
             recent_values = [item['value'] for item in data[-10:]]
             avg = sum(recent_values) / len(recent_values)
-            return f"Alert: {device_id} - {metric_name} average over last 10 readings: {avg:.2f}"
+            result = f"Alert: {device_id} - {metric_name} average over last 10 readings: {avg:.2f}"
+            logging.info(result)
+            return result
         return "Not enough data for analysis"
 
 processor = DataProcessor()
